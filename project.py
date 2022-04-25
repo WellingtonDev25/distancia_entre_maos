@@ -6,6 +6,9 @@ import math
 cap = cv2.VideoCapture(1)
 detector = HandDetector(detectionCon=0.8,maxHands=2)
 
+cap.set(3,640)
+cap.set(4,480)
+
 while True:
     success,img = cap.read()
     hands,img = detector.findHands(img)
